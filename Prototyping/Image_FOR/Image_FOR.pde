@@ -1,4 +1,4 @@
-/* Adpect Ratio
+/* Aspect Ratio
  */
 //
 //Display
