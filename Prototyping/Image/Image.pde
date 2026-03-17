@@ -1,10 +1,10 @@
 /* Adpect Ratio
-*/
+ */
 //
 //Display
 fullScreen();
 //
-String upArow = "../../";
+String upArow = "..";
 String dependanciesFolder = "Dependencies";
 String imagesFolder = "Images";
 String imageName = "Mona-Lisa-67-805x1200";
@@ -12,7 +12,11 @@ String fileExension = ".jpg";
 String open = "/";
 //
 //Concatenation
-//See \\FS-052\user$\mmercer\My Documents\GitHub\MusicPlayer20260202P3.github.io\Dependencies\Images
-String pathway = ;
+//Note, Cut Out, See Absolute Pathway: 
+//See Relative Pathway: Dependencies\Images
+String pathway = upArow + open + upArow + open + dependanciesFolder + open + imagesFolder + open + imageName + fileExension;
 //
-PImage image1 = loadImage(  );
+println(pathway);
+PImage image1 = loadImage( pathway );
+//
+image(image1, 0, 0);
