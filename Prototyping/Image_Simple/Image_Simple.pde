@@ -57,6 +57,7 @@ while ( imageHeightAdjusted1 > imageDivHeight ) {
 }//End WHILE
 //
 //CAUTION: might need to reposition rect(div) with image()
+//image(image2, imageDivX, imageDivY, imageWidthAdjusted2, imageHeightAdjusted1);
 //DIV: Image
 rect(imageDivX, imageDivY, imageDivWidth, imageDivHeight);
 //
