@@ -37,24 +37,28 @@ String title = "Wahoo!";
  - if font is too big, wrap around happens
  - OR full string is not drawn
  */
- //Fonts from OS
+ /*Fonts from OS
  println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
  String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
  //Spelling Counts and must compare CONSOLE v Tools / Create Font / Create Font Spelling
  //Tools / Create Font / Find Font / Do Not Press "OK", known conflict between loadFont() and createFont()
- //
+ */
 // Students enter all text from Case Study
 //
 // Fonts from OS
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
+println( fontSize );
 PFont font; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 font = createFont(harrington, fontSize);
 //
 // Aspect Ratio for Harrington
-fontSize = 83; //Default fontSize for ~100%
-
+float fontSizeHarrington = 83; //Default fontSize for ~100%
+float divHeightHarrington = songTitleDivWidth; //Key:Value, value=120
+float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington; //#<1
+fontSize = songTitleDivWidth*harringtonAspectRatio;
+println( fontSize );
 //
 //Drawing Text
 color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
