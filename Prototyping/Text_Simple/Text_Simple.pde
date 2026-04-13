@@ -53,6 +53,7 @@ String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list
 font = createFont(harrington, fontSize);
 //
 // Aspect Ratio for Harrington
+fontSize = 83; //Default fontSize for ~100%
 
 //
 //Drawing Text
