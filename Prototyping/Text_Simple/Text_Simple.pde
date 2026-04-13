@@ -50,8 +50,18 @@ String title = "Wahoo!";
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
 PFont font; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
+font = createFont(harrington, fontSize);
 //
 // Aspect Ratio for Harrington
+
 //
 //Drawing Text
+color purpleInk = #2C08FF; //AP MiniLesson on bit, 8-bit or byte (grey scale, 256), colour
+color whiteInk = #FFFFFF; //Grey Scale is 255
+color resetInk = whiteInk;
+fill(purpleInk); //Ink, hexidecimal copied from Color Selector
+//Grey Scale 0-255
+textFont(font, fontSize); //must include textSize() before text() & textWidth()
+text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
+fill(resetInk);
 //
