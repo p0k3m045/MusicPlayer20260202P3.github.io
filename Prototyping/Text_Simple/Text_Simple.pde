@@ -47,6 +47,9 @@ String title = "Wahoo!";
 // Students enter all text from Case Study
 //
 // Fonts from OS
+float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
+PFont font; //Font Varaible Name, able to have more than one Font
+String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 //
 // Aspect Ratio for Harrington
 //
