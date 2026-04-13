@@ -29,6 +29,15 @@ rect(songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight);
 rect(messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height);
 //
 //Strings, Text, Literal
+String title = "Wahoo!";
+/* Full String longer than Rectangle, "Wahoo! I changed 2D Size."
+ - divHeight must fit the font size or text is not shown (Advanced, error check includes %-decrease)
+ - Fonts includes the in WHITE SPACE around the foreground "coloured ink"
+ - divWidth must include the font size
+ - if font is too big, wrap around happens
+ - OR full string is not drawn
+ */
+// Students enter all text from Case Study
 //
 // Fonts from OS
 //
