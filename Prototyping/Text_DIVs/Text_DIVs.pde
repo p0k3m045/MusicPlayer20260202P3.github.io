@@ -47,20 +47,22 @@ String title = "Wahoo!";
 // Students enter all text from Case Study
 //
 // Fonts from OS
-float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
+float fontSize1 = appHeight; //Entire Program, Algorithm to have smallest font size
+float fontSize2 = appHeight; //Entire Program, Algorithm to have smallest font size
+float fontSize3 = appHeight; //Entire Program, Algorithm to have smallest font size
 //println( fontSize );
 PFont font; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
-font = createFont(harrington, fontSize);
+font = createFont(harrington, fontSize1);
 //
 // Aspect Ratio for Harrington
 float fontSizeHarrington = 83; //Default fontSize for ~100%
 float divHeightHarrington = songTitleDivHeight; //Key:Value, value=120
 float harringtonAspectRatio = fontSizeHarrington / divHeightHarrington; //#<1
 float textAdjustment = 0.9;
-fontSize = songTitleDivHeight*harringtonAspectRatio * textAdjustment;
-//fontSize2 = *harringtonAspectRatio * textAdjustment;
-//fontSize3 = *harringtonAspectRatio * textAdjustment;
+fontSize1 = songTitleDivHeight*harringtonAspectRatio * textAdjustment;
+fontSize2 = messageDIV_Height*harringtonAspectRatio * textAdjustment;
+fontSize3 = quitHeight*harringtonAspectRatio * textAdjustment;
 //println( fontSize );
 //
 //Drawing Text
@@ -71,9 +73,11 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
 textAlign (CENTER, BASELINE); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
-textFont(font, fontSize); //must include textSize() before text() & textWidth()
+textFont(font, fontSize1); //must include textSize() before text() & textWidth()
 text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
+textFont(font, fontSize2); //must include textSize() before text() & textWidth()
 text( title, quitX, quitY, quitWidth, quitHeight );
+textFont(font, fontSize3); //must include textSize() before text() & textWidth()
 text( title, messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height );
 fill(resetInk);
 //
