@@ -48,7 +48,7 @@ String title = "Wahoo!";
 //
 // Fonts from OS
 float fontSize = appHeight; //Entire Program, Algorithm to have smallest font size
-println( fontSize );
+//println( fontSize );
 PFont font; //Font Varaible Name, able to have more than one Font
 String harrington = "Harrington"; //Spelling of the Font Matters, see PFont.list() v Create Font above
 font = createFont(harrington, fontSize);
@@ -66,6 +66,8 @@ color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
 fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
+textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
+//Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 textFont(font, fontSize); //must include textSize() before text() & textWidth()
 text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
 fill(resetInk);
