@@ -37,7 +37,7 @@ String title = "Wahoo!";
  - if font is too big, wrap around happens
  - OR full string is not drawn
  */
- /*Fonts from OS
+/*Fonts from OS
  println("Start of Console"); //ERROR: in case CONSOLE Memory not enough
  String[] fontList = PFont.list(); //To list all fonts available on system
  printArray(fontList); //For listing all possible fonts to choose, then createFont
@@ -74,10 +74,15 @@ fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 textAlign (CENTER, BASELINE); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 textFont(font, fontSize1); //must include textSize() before text() & textWidth()
+while (textWidth(title) > songTitleDivWidth) {
+  println("here1");
+}
 text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
 textFont(font, fontSize2); //must include textSize() before text() & textWidth()
-text( title, quitX, quitY, quitWidth, quitHeight );
-textFont(font, fontSize3); //must include textSize() before text() & textWidth()
+//while (textWidth(title) > songTitleDivWidth) {println("here1");
 text( title, messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height );
+textFont(font, fontSize3); //must include textSize() before text() & textWidth()
+//while (textWidth(title) > songTitleDivWidth) {println("here1");
+text( title, quitX, quitY, quitWidth, quitHeight );
 fill(resetInk);
 //
