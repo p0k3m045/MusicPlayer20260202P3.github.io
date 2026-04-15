@@ -71,22 +71,51 @@ color whiteInk = #FFFFFF; //Grey Scale is 255
 color resetInk = whiteInk;
 fill(purpleInk); //Ink, hexidecimal copied from Color Selector
 //Grey Scale 0-255
-textAlign (CENTER, BASELINE); //Align X&Y, see Processing.org / Reference
+textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
 //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
 //
 //Note: drawing text after height dimension solved
 //WHILE solves length dimension
 //Additional docing required to adjust consistent text size for meaning in app
+float constantDecrease = 0.99;
+int iWhile=0;
 textFont(font, fontSize1); //must include textSize() before text() & textWidth()
 while (textWidth(title) > songTitleDivWidth) {
-  println("While #1");
+  //println("While #1"); //Demon Infinite LOOP
+  iWhile++;
+  if ( iWhile>1000 ) {
+    println("Infninte WHILE Loop");
+    exit();
+  }
+  fontSize1 *= constantDecrease;
+  textFont(font, fontSize1);
 }
 text( title, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
 textFont(font, fontSize2); //must include textSize() before text() & textWidth()
-//while (textWidth(title) > songTitleDivWidth) {println("While #2");
+iWhile=0;
+while (textWidth(title) > messageDIV_Width) {
+  //println("While #1"); //Demon Infinite LOOP
+  iWhile++;
+  if ( iWhile>1000 ) {
+    println("Infninte WHILE Loop");
+    exit();
+  }
+  fontSize2 *= constantDecrease;
+  textFont(font, fontSize2);
+}
 text( title, messageDIV_X, messageDIV_Y, messageDIV_Width, messageDIV_Height );
 textFont(font, fontSize3); //must include textSize() before text() & textWidth()
-//while (textWidth(title) > songTitleDivWidth) {println("While #3");
+iWhile=0;
+while (textWidth(title) > quitWidth) {
+  //println("While #1"); //Demon Infinite LOOP
+  iWhile++;
+  if ( iWhile>1000 ) {
+    println("Infninte WHILE Loop");
+    exit();
+  }
+  fontSize3 *= constantDecrease;
+  textFont(font, fontSize3);
+}
 text( title, quitX, quitY, quitWidth, quitHeight );
 fill(resetInk);
 //
