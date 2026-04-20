@@ -15,7 +15,8 @@
  - Library will not execute since not using full compiler
  
  */
-//Library - Minimimport ddf.minim.*;
+//Library - Minim
+import ddf.minim.*;
 import ddf.minim.analysis.*;
 import ddf.minim.effects.*;
 import ddf.minim.signals.*;
