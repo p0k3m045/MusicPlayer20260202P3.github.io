@@ -24,3 +24,4 @@ import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 //
 //Global Variables
+Minim minim;  //initates entire class
