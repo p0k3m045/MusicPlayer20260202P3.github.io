@@ -34,3 +34,7 @@ int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
 //Display
 size( 700, 500 ); //width //height
 //fullScreen();  //displayWidth //displayHeight
+int appWidth = width; //Best Practice
+int appHeight = height;
+//
+//Music Loading - STRUCTURED Review
