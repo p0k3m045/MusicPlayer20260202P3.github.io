@@ -25,3 +25,5 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;  //initates entire class
+int numberOfSongs = 1; //Best Practcie
+int numberOfSoundEffect = 1;
