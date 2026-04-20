@@ -38,3 +38,4 @@ int appWidth = width; //Best Practice
 int appHeight = height;
 //
 //Music Loading - STRUCTURED Review
+CONTINUE HERE - Upload Music to GitHub First
