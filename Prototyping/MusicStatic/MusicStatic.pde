@@ -43,7 +43,7 @@ String upArrow = "..";
 String open = "/";
 String musicFolder = "Music"; //Developer Specific
 String soundEffectsFolder = "Sound Effects"; //Developer Specific
-String dependanciesFolder = "Depindancies"; //Developer Specific
+String dependanciesFolder = "Dependencies"; //Developer Specific
 String songName1 = "groove";
 String soundEffect1 = "Car_Door_Closing";
 String fileExtension_mp3 = ".mp3";
@@ -51,10 +51,12 @@ String fileExtension_mp3 = ".mp3";
 //CAUTION: Mistakes Below
 String musicDirectory = upArrow + open + upArrow + open + dependanciesFolder + open + musicFolder + open ; //Concatenation
 String soundEffectsDirectory = upArrow + open + upArrow + open + dependanciesFolder + open + soundEffectsFolder + open ; //Concatenation
-String file = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
-playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
-file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
-soundEffects[currentSong] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+String pathway = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
+println(pathway);
+playList[ currentSong ] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+pathway = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
+println(pathway);
+soundEffects[currentSong] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
 //
 if ( playList[currentSong]==null || soundEffects[currentSong]==null ) { //ERROR, play list is NULL
   //See FILE or minim.loadFile
@@ -63,7 +65,9 @@ if ( playList[currentSong]==null || soundEffects[currentSong]==null ) { //ERROR,
   printArray(soundEffects);
   /*
   println("Music Pathway", musicDirectory);
-  println("Full Music File Pathway", file);
-  */
+   println("Full Music File Pathway", file);
+   */
+} else {
+  playList[currentSong].play();
+  printArray(playList);
 }
-playList[currentSong].play();
