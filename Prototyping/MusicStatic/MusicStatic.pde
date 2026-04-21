@@ -39,3 +39,12 @@ int appHeight = height;
 //
 //Music Loading - STRUCTURED Review
 minim = new Minim(this); //Manditory
+String upArrow = "..";
+String open = "/";
+String musicFolder = "Music"; //Developer Specific
+String soundEffectsFolder = "Sound Effects"; //Developer Specific
+String dependanciesFolder = "Depindancies"; //Developer Specific
+String songName1 = "groove";
+String soundEffect1 = "Car_Door_Closing";
+String fileExtension_mp3 = ".mp3";
+//
