@@ -56,4 +56,14 @@ playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Lib
 file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
 soundEffects[currentSong] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
 //
+if ( playList[currentSong]==null || soundEffects[currentSong]==null ) { //ERROR, play list is NULL
+  //See FILE or minim.loadFile
+  println("The Play List or Sound Effects did not load properly");
+  printArray(playList);
+  printArray(soundEffects);
+  /*
+  println("Music Pathway", musicDirectory);
+  println("Full Music File Pathway", file);
+  */
+}
 playList[currentSong].play();
