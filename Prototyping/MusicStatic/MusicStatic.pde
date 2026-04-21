@@ -48,3 +48,11 @@ String songName1 = "groove";
 String soundEffect1 = "Car_Door_Closing";
 String fileExtension_mp3 = ".mp3";
 //
+//CAUTION: Mistakes Below
+String musicDirectory = upArrow + open + upArrow + open + dependanciesFolder + open + musicFolder + open ; //Concatenation
+String soundEffectsDirectory = upArrow + open + upArrow + open + dependanciesFolder + open + soundEffectsFolder + open ; //Concatenation
+String file = musicDirectory + songName1 + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
+playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
+soundEffects[currentSong] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+//
