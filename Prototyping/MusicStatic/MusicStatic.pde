@@ -56,3 +56,4 @@ playList[ currentSong ] = minim.loadFile( file ); //ERROR: Verify Spelling & Lib
 file = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
 soundEffects[currentSong] = minim.loadFile( file ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
 //
+playList[currentSong].play();
