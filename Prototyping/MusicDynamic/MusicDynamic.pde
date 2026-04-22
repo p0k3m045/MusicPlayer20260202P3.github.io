@@ -19,6 +19,8 @@ AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffect ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
 //
+void setup() {}//End Setup
+//
 //Display
 size( 700, 500 ); //width //height
 //fullScreen();  //displayWidth //displayHeight
