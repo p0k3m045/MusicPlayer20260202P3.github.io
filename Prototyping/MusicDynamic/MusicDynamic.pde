@@ -13,7 +13,7 @@ import ddf.minim.ugens.*;
 //
 //Global Variables
 Minim minim;  //initates entire class
-int numberOfSongs = 1; //Best Practcie
+int numberOfSongs = 8; //Best Practcie
 int numberOfSoundEffect = 1;
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffect ];
@@ -33,6 +33,19 @@ void setup() {
   String musicFolder = "Music"; //Developer Specific
   String soundEffectsFolder = "Sound Effects"; //Developer Specific
   String dependanciesFolder = "Dependencies"; //Developer Specific
+  //
+  String[] songName = new String[numberOfSongs];
+  songName[0] = "Beat_Your_Competition";
+  songName[1] = "Cycles";
+  songName[2] = "Eureka";
+  songName[3] = "Ghost_Walk";
+  songName[4] = "groove";
+  songName[5] = "Newsroom";
+  songName[6] = "Start_Your_Engines";
+  songName[7] = "The_Simplest";
+  
+  CONTINUE HERE
+  
   String songName1 = "groove";
   String soundEffect1 = "Car_Door_Closing";
   String fileExtension_mp3 = ".mp3";
@@ -57,7 +70,7 @@ void setup() {
      println("Full Music File Pathway", file);
      */
   } else {
-    playList[currentSong].play();
+    playList[currentSong].loop();
     printArray(playList);
   }
 }//End Setup
