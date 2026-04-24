@@ -71,6 +71,7 @@ void setup() {
   String pathway;
   for ( int i=0; i<numberOfSongs; i++ ) {
     pathway = musicDirectory + songName[i] + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
+    println("Insdei FOR, pathway:", pathway);
     playList[ currentSong ] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
   }
   pathway = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
