@@ -97,7 +97,8 @@ void setup() {
 }//End Setup
 //
 void draw() {
-  playList[currentSong].play();
+  //playList[currentSong].play();
+  soundEffects[currentSong].play();
 }//End Draw
 //
 void mousePressed() {
