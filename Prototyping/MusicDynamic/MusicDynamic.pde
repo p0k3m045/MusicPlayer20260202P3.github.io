@@ -96,6 +96,7 @@ void setup() {
     //CAUTION: removed ReadMe.txt
     pathway = musicDirectory + songName[i] + fileExtension_mp3; //TO BE Rewritten and deleted once file is LOADED
     playList[ i ] = minim.loadFile( pathway ); //ERROR: Verify Spelling & Library installed, Sketch / Import Library
+    playListMetaData[ i ] = playList[ i ].getMetaData();
     //CAUTION: not currentSong var
   }
   pathway = soundEffectsDirectory + soundEffect1 + fileExtension_mp3; //Rewritting FILE
