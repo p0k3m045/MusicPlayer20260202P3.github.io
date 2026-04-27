@@ -148,7 +148,7 @@ void setup() {
   float constantDecrease = 0.99;
   int iWhile=0;
   textFont(font, fontSize1); //must include textSize() before text() & textWidth()
-  while ( textWidth(x) > songTitleDivWidth ) {
+  while ( textWidth(playListMetaData[currentSong].title()) > songTitleDivWidth ) {
     //println("While #1"); //Infinite WHILE Check
     iWhile++;
     if ( iWhile>10000 ) { //>1000 means -1 text or i
@@ -158,7 +158,7 @@ void setup() {
     fontSize1 *= constantDecrease;
     textFont(font, fontSize1);
   }
-  text( x, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
+  text( playListMetaData[currentSong].title(), songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
   //
   
   
