@@ -16,6 +16,7 @@ Minim minim;  //initates entire class
 int numberOfSongs = 8; //Best Practcie
 int numberOfSoundEffect = 1;
 AudioPlayer[] playList = new AudioPlayer[ numberOfSongs ];
+AudioMetaData[] playListMetaData = new AudioMetaData[ numberOfSongs ];
 AudioPlayer[] soundEffects = new AudioPlayer[ numberOfSoundEffect ];
 int currentSong = numberOfSongs - numberOfSongs; //ZERO, Math Property
 //
