@@ -139,11 +139,23 @@ void setup() {
   color resetInk = whiteInk;
   fill(purpleInk); //Ink, hexidecimal copied from Color Selector
   //Grey Scale 0-255
-  textAlign (CENTER, TOP); //Align X&Y, see Processing.org / Reference
+  textAlign (CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [LEFT | CENTER | RIGHT] & [TOP | CENTER | BOTTOM | BASELINE]
   //
-  
-  
+  // Procedure Passing RECT(#2) && fontSize(RECT#)
+  float constantDecrease = 0.99;
+  int iWhile=0;
+  textFont(font, fontSize1); //must include textSize() before text() & textWidth()
+  while ( textWidth(x) > songTitleDivWidth ) {
+    //println("While #1"); //Infinite WHILE Check
+    iWhile++;
+    if ( iWhile>10000 ) { //>1000 means -1 text or i
+      println("Infninte WHILE Loop");
+      exit();
+    }
+    fontSize1 *= constantDecrease;
+    textFont(font, fontSize1);
+  }
   text( x, songTitleDivX, songTitleDivY, songTitleDivWidth, songTitleDivHeight );
   //
   
